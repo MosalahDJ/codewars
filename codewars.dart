@@ -1,24 +1,21 @@
 void main() {
-  String testText = "hello world this is double  space";
+  String testText = "hello  hello";
   String reverseWords(String text) {
     List words = [];
     List reverssedwords = [];
     String word = "";
     List finalreverse = [];
-
     words.addAll(text.split(" "));
     words.removeWhere((e) => e == "");
     for (int i = 0; i < words.length; i++) {
-      reverssedwords.add(words[i].toString().split(""));
-      reverssedwords.reversed;
-      print(reverssedwords);
-      finalreverse.add("");
+      reverssedwords = words[i].toString().split("");
+      finalreverse.add(reverssedwords.reversed.join());
       reverssedwords.clear();
     }
-
-    print(finalreverse);
-
-    return '';
+    for (int i = 0; i < finalreverse.length; i++) {
+      i==0? word = "$word${finalreverse[i]}":word = "$word ${finalreverse[i]}";
+    }
+    return word;
   }
 
   print(reverseWords(testText));

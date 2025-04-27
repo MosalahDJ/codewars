@@ -1,11 +1,12 @@
 void main() {
   int num = 12;
-  List<int> divisorsList = [];
+  List<int> result = [];
+
   Object divisors(int number) {
-    for (int i = 0; i < number && number > 1; i--) {
-      if (number % i == 0) {
-        divisorsList.add(i);
-      }
+  List<int> divisorsList = [];
+    for (int i = number; i <= number; i--) {
+      number % i == 0?divisorsList.add(i):null;
+      
     }
     return [];
   }
@@ -21,6 +22,7 @@ first thing I must do is to make a loop on the numbers under num
 then I must add a list of int 
 then I must add a condition if the number is divisor or not
 if it's divisor add it to the list of int else null
-then I need to an other check
-
+then I need to another check if the list has only 1 and the num it selfe return the str 
+else remove the 1 and num from the list
+then sort it from S to L
 */

@@ -1,14 +1,20 @@
 void main() {
-  int num = 12;
-  List<int> result = [];
-
+  int num = 2;
   Object divisors(int number) {
-  List<int> divisorsList = [];
-    for (int i = number; i <= number; i--) {
-      number % i == 0?divisorsList.add(i):null;
-      
+    List<int> divisorsList = [];
+    for (int i = number; i <= number &&i>0; i--) {
+      number % i == 0 ? divisorsList.add(i) : null;
     }
-    return [];
+    divisorsList.sort();
+      if (divisorsList.length == 2 &&
+          divisorsList[0] == 1 &&
+          divisorsList[1] == number) {
+        return '($number) is prime';
+      } else {
+        divisorsList.remove(divisorsList[0]);
+        divisorsList.remove(divisorsList[divisorsList.length - 1]);
+      }
+    return divisorsList;
   }
 
   print(divisors(num));

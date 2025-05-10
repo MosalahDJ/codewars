@@ -1,7 +1,17 @@
 void main() {
   int num = 2;
 
-  int factorial(int n) => n == 0 ? 1 : n * factorial(n);
+  int factorial(int n) {
+    late int res;
+    if (n == 0) {
+      return 1;
+    } else {
+      for (int i = n; i <= n && i > 0; i--) {
+        res = n * n - 1;
+      }
+      return res;
+    }
+  }
 
   print(factorial(num));
 }

@@ -1,29 +1,16 @@
 void main() {
-  int num = 2;
+  String num = "123456789";
 
-  int factorial(int n) {
-    int res =1;
-    if (n == 0) {
-      return 1;
-    } else {
-      for (int i = n; i <= n && i > 0; i--) {
-        res = res * n - 1;
-      }
-      return res;
-    }
+  int solution(String digits) {
+
+    
+    return 1234;
   }
 
-  print(factorial(num));
+  print(solution(num));
 }
 
 
-
-
 /*
-add a list<int> 
-make a loop of nums 
-then make another loop of every list inside nums x
-add every list to the new list
-then remove the space field
 
 */
